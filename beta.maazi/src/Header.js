@@ -49,7 +49,7 @@ function Header(props) {
         </div>
        
        <div className="welcome-text-area">
-            <div className="area-bg"></div>
+            <div className="area-bg" style={{backgroundImage: 'url(assets/img/home/01.png)'}}></div>
             <div className="welcome-area">
                 <div className="container">
                     <div className="row flex-v-center">

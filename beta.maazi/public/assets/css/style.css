@@ -24,6 +24,7 @@ Version: 1.0
 /*----------------------------
     1.1. WELCOME TEXT AREA
 ------------------------------*/
+/* <div className="slider-wrapper pt-255" style={{backgroundImage: 'url(img/slider/slider.jpg)'}}> */
 
 .welcome-text-area .area-bg::before {
     background: url(assets/img/home/01.png) no-repeat scroll top right / cover;
