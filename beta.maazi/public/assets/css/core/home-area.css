@@ -1,0 +1,186 @@
+/*----------------------------
+    3. WELCOME TEXT AREA
+------------------------------*/
+
+.login-register {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    min-height: 100px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.is-sticky .login-register {
+    min-height: 60px;
+}
+
+ul#nav {
+    float: left;
+    margin-left: 50px;
+}
+
+.login-register ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.login-register ul li {
+    display: inline-block;
+}
+
+.login-register ul li a {
+    border-radius: 50px;
+    display: block;
+    padding: 5px 20px;
+    text-transform: capitalize;
+}
+.login-register ul li:last-child a {
+  -webkit-box-shadow: 0 0 14px rgba(255, 116, 103, 0.5);
+  box-shadow: 0 0 14px rgba(255, 116, 103, 0.5);
+}
+.login-register ul li:last-child a,
+.login-register ul li a:hover {
+    background: #ff7467 none repeat scroll 0 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+/*----------------------------*/
+.welcome-area {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 18px;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.welcome-mockup img {
+    width: 70%;
+}
+
+.welcome-text h4 {
+    background: rgba(255, 116, 103, 0.1) none repeat scroll 0 0;
+    border-radius: 50px;
+    color: #ff7467;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.welcome-text h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.home-button {
+    margin-top: 50px;
+}
+
+.home-button a {
+  background: rgb(255, 116, 103) none repeat scroll 0 0;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 0 20px rgba(255, 116, 103, 0.5);
+  box-shadow: 0 0 20px rgba(255, 116, 103, 0.5);
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-right: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.home-button a:hover,
+.sign-up:hover {
+    background: #ffffff none repeat scroll 0 0;
+    border-color: #ff7467;
+    color: #ff7467;
+}
+
+@media only screen and (min-width: 1920px) {
+    .welcome-text h1 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+    .welcome-text h1 {
+        font-size: 32px;
+    }
+
+    .welcome-mockup img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-mockup {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-text h1 {
+        font-size: 26px;
+    }
+
+    .welcome-text p {
+        display: none;
+    }
+
+    .welcome-area .download-button {
+        display: none;
+    }
+
+    .welcome-mockup {
+        display: none;
+    }
+
+    .download-button a:first-child {
+        margin-bottom: 30px;
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .welcome-text h1 {
+        font-size: 32px;
+    }
+
+    .welcome-area .download-button {
+        display: block;
+    }
+
+    .download-button a:first-child {
+        margin-bottom: inherit;
+    }
+}

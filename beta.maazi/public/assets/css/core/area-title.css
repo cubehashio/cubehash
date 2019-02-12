@@ -1,0 +1,81 @@
+@media only screen and (min-width: 1920px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/*-----------------------
+    SECTION TITLE
+------------------------*/
+
+.area-title {
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.area-title h2 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+.area-title h2 span {
+    color: #FF7467;
+}
+
+/*.area-title p {
+    font-size: 12px;
+    letter-spacing: 5px;
+    position: relative;
+    text-transform: uppercase;
+}
+.area-title p::before, .area-title p::after {
+    background: #dddddd none repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    margin-right: 5px;
+    position: relative;
+    top: -4px;
+    width: 30px;
+}
+.area-title p::after {
+    margin-left: 5px;
+    margin-right: 0;
+}*/
+
+@media only screen and (min-width: 1920px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+@media (min-width: 768px) and (max-width: 991px) {}
+
+@media only screen and (max-width: 767px) {
+    .area-title {
+        margin-bottom: 50px;
+    }
+
+    .area-title h2 {
+        line-height: 1.3;
+        font-size: 24px;
+    }
+
+    .download-area .area-title h2 {
+        font-size: 22px;
+    }
+
+    .accordion-toggle .fa-angle-down {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .area-title h2 {
+        font-size: 24px;
+    }
+}

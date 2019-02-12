@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+                                PLUGINS CSS FILES INDEX
+========================================================================================
+    1. BASE CSS
+----------------------------------------------------------------------------------------*/
+
+@import url("plugins/normalize.css");
+@import url("plugins/animate.css");
+@import url("plugins/owl.carousel.css");
+@import url("plugins/swiper.min.css");
+@import url("plugins/stellarnav.min.css");
+@import url("plugins/bootstrap.min.css");

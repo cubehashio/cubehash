@@ -1,0 +1,292 @@
+/*------------------------------
+    PRELOADER
+-------------------------------*/
+
+.preeloader {
+    background: rgba(255, 255, 255, 1) none repeat scroll 0 0;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+.preloader-spinner {
+    -webkit-animation: 1s ease-out 0s normal none infinite running pulsate;
+    animation: 1s ease-out 0s normal none infinite running pulsate;
+    border: 5px solid #292929;
+    border-radius: 40px;
+    display: block;
+    height: 40px;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    width: 40px;
+    z-index: 10;
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+}
+
+
+/*----------------------------------
+    LARGE LAYOUT: 1920px
+-----------------------------------*/
+
+@media only screen and (min-width: 1920px) {
+
+    .about-mockup-bg {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 60%;
+    }
+
+    .right-layer {
+        width: auto;
+    }
+    .home-three .right-layer {
+      width: 38%;
+    }
+}
+
+/*----------------------------------
+    MEDIUM LAYOUT: 1280px
+-----------------------------------*/
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .right-layer {
+        position: absolute;
+        width: 40%;
+    }
+
+    .login-register {
+        min-height: 80px;
+    }
+
+    .home-two .welcome-text h1 {
+        font-size: 52px;
+        letter-spacing: 0;
+    }
+
+    .testimonials-slider .bx-wrapper .bx-controls-direction {
+        width: calc(100% - 65px);
+    }
+
+    .box-title {
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+}
+
+
+/*----------------------------------
+    TABLET LAYOUT: 768px
+------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 991px) {
+    ul#nav {
+        margin-left: 0;
+    }
+
+    .welcome-text-area .area-bg::before {
+        width: 100%;
+    }
+
+    .right-layer {
+        margin: 50px auto 0;
+        position: inherit;
+        width: 46%;
+    }
+
+    .login-register {
+        display: none;
+    }
+
+    .about-content h3 {
+        font-size: 22px;
+    }
+
+    .about-area .flex-v-center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .call-to-action.flex-v-center {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    .single-testmonial-two {
+        margin-bottom: 5px;
+    }
+
+    .about-mockup-bg {
+        margin: 0 auto;
+        position: inherit;
+        width: 80%;
+    }
+    .about-bottom-area .about-mockup-bg {
+        margin-top: 50px;
+    }
+    .about-top-area.padding-150-150 {
+        padding: 0 0 50px;
+        text-align: center;
+    }
+
+    .about-bottom-area.padding-150-150 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .text-icon-box {
+        -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-area.single-page {
+        background: #f3f3f3 none repeat scroll 0 0;
+        height: 300px;
+    }
+
+    .testimonials-slider .bx-wrapper .bx-controls-direction {
+        width: 100%;
+    }
+    .right-layer {
+      z-index: 1;
+    }
+}
+
+/*----------------------------------
+    MOBILE LAYOUT: 320px
+-----------------------------------*/
+
+@media only screen and (max-width: 767px) {
+    ul#nav {
+        margin-left: 0;
+    }
+
+    .welcome-text-area .area-bg::before {
+        width: 100%;
+    }
+
+    .right-layer {
+        display: none;
+    }
+
+    .login-register {
+        display: none;
+    }
+
+    .about-content h3 {
+        font-size: 20px;
+    }
+
+    .footer-social-bookmark .social-bookmark li a {
+        margin: 5px;
+    }
+
+    .accordion-toggle .fa-angle-down {
+        display: none;
+    }
+
+    .subscriber-form {
+        font-size: 14px;
+    }
+
+    .subscriber-form button {
+        width: auto;
+    }
+
+    .call-to-action {
+        display: inherit;
+    }
+
+    .call-to-action > div {
+        text-align: center;
+        width: 100%;
+    }
+
+    .single-testmonial-two {
+        margin-bottom: 5px;
+    }
+
+    .about-mockup-bg {
+        margin: 0 auto;
+        position: inherit;
+        width: 80%;
+    }
+
+    .about-top-area.padding-150-150 {
+        padding: 0 0 30px;
+        text-align: center;
+    }
+
+    .about-bottom-area.padding-150-150 {
+        padding: 0;
+        text-align: center;
+    }
+
+    .text-icon-box {
+        -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    }
+
+    .top-area.single-page {
+        background: #f3f3f3 none repeat scroll 0 0;
+        height: 300px;
+    }
+    .home-two .welcome-text h1 {
+      font-size: 26px;
+    }
+}
+
+/*----------------------------------
+    WIDE MOBILE LAYOUT: 480px
+-----------------------------------*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .about-content h3 {
+        font-size: 24px;
+    }
+
+}
