@@ -209,7 +209,7 @@ label {
 
 .btn {
 	-moz-user-select: none;
-	background: #fd8917;
+	background: #5359df;
 	border: medium none;
 	color: #fff;
 	cursor: pointer;
@@ -298,7 +298,7 @@ label {
 	color: rgb(0, 0, 0);
 	display: block;
 	font-size: 20px;
-	font-weight: regular;
+	font-weight: 600px;
 	padding: 51px 24px;
 	text-transform: capitalize;
 	transition: all 0.3s ease 0s;
@@ -815,7 +815,7 @@ label {
 .footer-area{}
 .footer-wrapper{}
 .footer-logo {
-	margin-bottom: 35px;
+	margin-bottom: 5px;
 }
 .footer-link{}
 .footer-link li {
@@ -824,7 +824,7 @@ label {
 }
 .footer-link li:last-child{margin-right:0;}
 .footer-link li a {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	font-size: 18px;
 	font-weight: 400;
 }
@@ -832,7 +832,7 @@ label {
 	margin-top: 27px;
 }
 .copyright p {
-	color: #fff;
+	color: rgb(0, 0, 0);
 	margin-bottom: 0;
 }
 .copyright i{}
@@ -841,7 +841,7 @@ label {
 }
 .footer-icon a {
 	font-size: 22px;
-	color: #fff;
+	color: #5359df;
 	opacity: .60;
 	margin: 0 10px;
 }
