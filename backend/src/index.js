@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-// import registerServiceWorker from './registerServiceWorker'
+import registerServiceWorker from './registerServiceWorker'
 import App from './App'
 import registry from './services/registry'
 import plcr from './services/plcr'
@@ -40,7 +40,7 @@ async function init() {
     console.error(error)
   }
   ReactDOM.render(<App />, document.getElementById('root'))
-  // registerServiceWorker()
+  registerServiceWorker()
   // unregister()
 }
 

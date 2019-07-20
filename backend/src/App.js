@@ -11,7 +11,7 @@ import {
 import CSSTransitionGroup from 'react-addons-css-transition-group'
 import MainSidebar from './components/sidebar/MainSidebar'
 import MainContainer from './components/MainContainer'
-// import RegistryWalkthrough from './components/registry_guide/RegistryWalkthrough'
+import RegistryWalkthrough from './components/registry_guide/RegistryWalkthrough'
 import TransactionProgressModal from './components/TransactionProgressModal'
 import { MobileNavigation } from './components/mobile_nav/MobileNavigation';
 import  MobileApplication  from './components/mobile_nav/MobileApplication';
@@ -23,7 +23,7 @@ class App extends Component {
         <Route render={({ location }) => (
           <div className='App'>
             <div className='ui grid stackable'>
-              {/* <RegistryWalkthrough /> */}
+              <RegistryWalkthrough />
               <div className={isMobile() ? 'MobileApplicationContainer' :'MainSidebarWrap column four wide'}>
                 <MainSidebar Link={Link} />
                 <MobileApplication Link={Link} Route={Route}/>

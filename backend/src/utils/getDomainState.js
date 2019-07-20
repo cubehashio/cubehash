@@ -11,6 +11,7 @@ function isExpired (end) {
 
 const getDomainState = async (data) => {
   if (!data || !data.domainHash) return {}
+  // console.log("Data.domain: ", data.domain)
   const item = {
     domain: data.domain,
     color: '',
@@ -164,12 +165,13 @@ const getDomainState = async (data) => {
 
     return item
 
-    // --------------------------------------------------------------
-    // -------------Catch All - Wrong Network------------------------
-    // --------------------------------------------------------------
+    // ----------------------------------------------------------
+    // -------------Catch All - Wrong Network--------------------
+    // ----------------------------------------------------------
   } catch (error) {
-    console.log(error)
+    console.log('Error getting domain state: ', error)
     if (item.domain) {
+      console.log('item: ', item)
       return {
         domain: item.domain || '',
         siteName: item.domain || '',

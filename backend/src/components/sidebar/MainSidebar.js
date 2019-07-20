@@ -10,11 +10,11 @@ import metaxLogo from '../assets/white_text_metax_logo.svg'
 import adtokenLogo from '../assets/adtoken_logo_white.png'
 import wwwLogo from '../assets/WWW.svg'
 import dashboardLogo from '../assets/DASHBOARD.svg'
-// import helpLogo from '../assets/HELP.svg'
+import helpLogo from '../assets/HELP.svg'
 import parametersLogo from '../assets/PARAMETERS.svg'
 import socialLogo from '../assets/SOCIALS (OPEN).svg'
 import toolsLogo from '../assets/TOOLS.svg'
-// import RegistryGuideModal from '../registry_guide/RegistryGuideModal'
+import RegistryGuideModal from '../registry_guide/RegistryGuideModal'
 
 import './MainSidebar.css'
 
@@ -58,27 +58,42 @@ class MainSidebar extends Component {
       </ul>
     )
 
-    
+    const HelpOptions = (
+      <ul style={{listStyle: 'none'}}>
+        <li>
+          <Link to='/' onClick={() => PubSub.publish('WelcomeModal.open')} activeClassName='active'>Welcome</Link>
+        </li>
+        <li>
+          <Link to='/domains' onClick={() => PubSub.publish('RegistryGuideModal.show')} activeClassName='active'>View Guides</Link>
+        </li>
+        <li>
+          <a href='https://metax.zendesk.com/hc/en-us' target='_blank' rel='noopener noreferrer'>Help Center</a>
+        </li>
+        <li>
+          <a href='https://goo.gl/forms/px9fgyKhFrZDjBV42' target='_blank' rel='noopener noreferrer'>Submit Feedback</a>
+        </li>
+      </ul>
+    )
 
-    // const SocialLinks = (
-    //   <ul style={{listStyle: 'none'}}>
-    //     <li>
-    //       <a href='https://t.me/adChain' target='_blank' rel='noopener noreferrer'>Telegram</a>
-    //     </li>
-    //     <li>
-    //       <a href='https://twitter.com/ad_chain' target='_blank' rel='noopener noreferrer'>Twitter</a>
-    //     </li>
-    //     <li>
-    //       <a href='https://medium.com/@adchain' target='_blank' rel='noopener noreferrer'>Medium</a>
-    //     </li>
-    //     <li>
-    //       <a href='https://github.com/adchain' target='_blank' rel='noopener noreferrer'>GitHub</a>
-    //     </li>
-    //     <li>
-    //       <a href='https://reddit.com/r/adchain' target='_blank' rel='noopener noreferrer'>Reddit</a>
-    //     </li>
-    //   </ul>
-    // )
+    const SocialLinks = (
+      <ul style={{listStyle: 'none'}}>
+        <li>
+          <a href='https://t.me/adChain' target='_blank' rel='noopener noreferrer'>Telegram</a>
+        </li>
+        <li>
+          <a href='https://twitter.com/ad_chain' target='_blank' rel='noopener noreferrer'>Twitter</a>
+        </li>
+        <li>
+          <a href='https://medium.com/@adchain' target='_blank' rel='noopener noreferrer'>Medium</a>
+        </li>
+        <li>
+          <a href='https://github.com/adchain' target='_blank' rel='noopener noreferrer'>GitHub</a>
+        </li>
+        <li>
+          <a href='https://reddit.com/r/adchain' target='_blank' rel='noopener noreferrer'>Reddit</a>
+        </li>
+      </ul>
+    )
 
     return (
       <Accordion as={Menu} vertical inverted className='MainSidebar sidebar visible overflow-y borderless'>
@@ -89,6 +104,9 @@ class MainSidebar extends Component {
         </div>
         <div className={this.state.mobile ? 'hide': 'SidebarListContainer overflow-x'}>
           <div className='SidebarList overflow-y overflow-x'>
+            <div className='ListTitle ui header'>
+              <RegistryGuideModal updateRoute={this.updateRoute} />
+            </div>
             <Menu.Item name='domain'>
               <Link to='/domains' className='NavLink' activeClassName='active'><img src={wwwLogo} alt='www' />Domains</Link>
             </Menu.Item>
@@ -109,7 +127,7 @@ class MainSidebar extends Component {
               </Accordion.Title>
               <Accordion.Content active={activeIndex === 1} content={ToolsLinks} />
             </Menu.Item>
-            {/* <Menu.Item name='help'>
+            <Menu.Item name='help'>
               <Accordion.Title
                 id={2}
                 active={activeIndex === 2}
@@ -130,7 +148,7 @@ class MainSidebar extends Component {
                 <i aria-hidden='true' className={this.state.accordionArrow === 'social' ? this.state.socialClicked ? 'dropdown icon AccordionArrowRotatedSocial' : 'dropdown icon AccordionArrow' : 'dropdown icon AccordionArrow'} />
               </Accordion.Title>
               <Accordion.Content active={activeIndex === 3} content={SocialLinks} />
-            </Menu.Item> */}
+            </Menu.Item>
           </div>
         </div>
         <SideBarApplicationContainer />
@@ -141,16 +159,16 @@ class MainSidebar extends Component {
             Powered By
           </div>
           <div className='metaxLogo ui image'>
-            <a href='' target='_blank' rel='noopener noreferrer'>
+            <a href='https://metax.io' target='_blank' rel='noopener noreferrer'>
               <img src={metaxLogo} alt='MetaX' className='SidebarFooterLogos' />
             </a>
             <span className='ImageBorder' />
-            <a href='' target='_blank' rel='noopener noreferrer'>
+            <a href='https://adtoken.com' target='_blank' rel='noopener noreferrer'>
               <img src={adtokenLogo} alt='AdToken' className='SidebarFooterLogos' />
             </a>
           </div>
           <div className='Copyright'>
-            <p>© Copyright 2018 .</p>
+            <p>© Copyright 2019 MetaXchain, Inc.</p>
             <p>All rights reserved.</p>
           </div>
         </div>

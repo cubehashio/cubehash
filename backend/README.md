@@ -8,7 +8,7 @@
 
 # Live
 
-[https://localhost:5002](https://localhost:5002)
+[https://publisher.adchain.com](https://publisher.adchain.com)
 
 # Install
 
