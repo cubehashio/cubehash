@@ -1,1 +1,1 @@
-# cubehash
+# CubeHash Blockchain Network
