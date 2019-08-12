@@ -6,7 +6,7 @@ install:
 	@echo "\n\nCubeHash, the TestNet for CubeHash (cbh) has successfully installed!"
 
 build:
-	go build -o build/cbh ./cmd/cbh
+	go get -o build/cbh ./cmd/cbh
 	@echo "\n\nCubeHash, the TestNet for CubeHash (cbh) has successfully build!"
 
 
