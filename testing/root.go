@@ -6,8 +6,8 @@ import (
 
 var (
 	rootCmd = &cobra.Command{
-		Use:   "CubeHash",
-		Short: "This is the CubeHash stress test application",
+		Use:   "cubehash",
+		Short: "This is the cubehash stress test application",
 	}
 )
 

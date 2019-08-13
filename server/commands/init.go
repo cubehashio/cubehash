@@ -3,8 +3,8 @@ package commands
 import (
 	"encoding/json"
 	"fmt"
-	global "github.com/cubehashio/CubeHash/global"
-	ugeth "github.com/cubehashio/CubeHash/server/ethereum"
+	global "github.com/cubehashio/cubehash/global"
+	ugeth "github.com/cubehashio/cubehash/server/ethereum"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/spf13/cobra"
 	cfg "github.com/tendermint/tendermint/config"

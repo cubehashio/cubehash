@@ -2,7 +2,7 @@ package commands
 
 import (
 	"fmt"
-	global "github.com/cubehashio/CubeHash/global"
+	global "github.com/cubehashio/cubehash/global"
 	"github.com/spf13/cobra"
 	cmn "github.com/tendermint/tendermint/libs/common"
 	"github.com/tendermint/tendermint/p2p"

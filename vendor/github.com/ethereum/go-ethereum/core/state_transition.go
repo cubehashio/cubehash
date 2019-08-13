@@ -155,7 +155,7 @@ func (st *StateTransition) useGas(amount uint64) error {
 }
 
 func (st *StateTransition) buyGas() error {
-	////CubeHash check gas
+	////cubehash check gas
 	//if st.gasPrice.Int64() == 0 {
 	//	account, _:= g_GasManager.StateDB().GetAccount(st.msg.From())
 	//	freeGas,_ := g_GasManager.CalculateFreeGas(account, st.state.GetBalance(st.msg.From()))

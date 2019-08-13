@@ -1,11 +1,11 @@
 package commands
 
 import (
-	"github.com/cubehashio/CubeHash/api"
-	ethbaseapp "github.com/cubehashio/CubeHash/app/ethereum"
-	tmbaseapp "github.com/cubehashio/CubeHash/app/tendermint"
-	ethServer "github.com/cubehashio/CubeHash/server/ethereum"
-	"github.com/cubehashio/CubeHash/server/tendermint"
+	"github.com/cubehashio/cubehash/api"
+	ethbaseapp "github.com/cubehashio/cubehash/app/ethereum"
+	tmbaseapp "github.com/cubehashio/cubehash/app/tendermint"
+	ethServer "github.com/cubehashio/cubehash/server/ethereum"
+	"github.com/cubehashio/cubehash/server/tendermint"
 	ethUtils "github.com/ethereum/go-ethereum/cmd/utils"
 	"github.com/ethereum/go-ethereum/eth"
 	ethlog "github.com/ethereum/go-ethereum/log"

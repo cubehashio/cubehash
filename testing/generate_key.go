@@ -17,7 +17,7 @@ var DefaultFile = "./config.json"
 var Generate = &cobra.Command {
 	Use:     "generate",
 	Short:   "generate private key and address",
-	Long:    "This is the CubeHash used to generate the private key and address command to generate the private key to write to ./config.json",
+	Long:    "This is the cubehash used to generate the private key and address command to generate the private key to write to ./config.json",
 	Example: `./cmd generate 10 or ./cmd generate n`,
 	Run:     GenerateKey,
 }

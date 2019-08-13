@@ -24,7 +24,7 @@ import (
 var GenerateTx = &cobra.Command{
 	Use:     "generate_tx",
 	Short:   "Generate transaction for testing TPS.",
-	Long:    "This is the CubeHash generated transaction flag used to test the transaction processing system.",
+	Long:    "This is the cubehash generated transaction flag used to test the transaction processing system.",
 	Example: `./cmd generate_tx toPrivateKey 10 URL or ./cmd generate_tx toPrivateKey count URL`,
 	Run:     GenerateTransaction,
 }

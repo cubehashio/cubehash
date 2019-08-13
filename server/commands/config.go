@@ -21,14 +21,14 @@ const (
 	configFile = "config.toml"
 )
 
-type CubeHashConfig struct {
+type cubehashConfig struct {
 	BaseConfig BaseConfig      `mapstructure:",squash"`
 	TMConfig   tmcfg.Config    `mapstructure:",squash"`
 	EMConfig   TenderminConfig `mapstructure:"vm"`
 }
 
-func DefaultConfig() *CubeHashConfig {
-	return &CubeHashConfig{
+func DefaultConfig() *cubehashConfig {
+	return &cubehashConfig{
 		BaseConfig: DefaultBaseConfig(),
 		TMConfig:   *tmcfg.DefaultConfig(),
 		EMConfig:   DefaultTendermintConfig(),
@@ -86,7 +86,7 @@ func DefaultTendermintConfig() TenderminConfig {
 
 // copied from tendermint/commands/root.go
 // to call our revised EnsureRoot
-func ParseConfig() (*CubeHashConfig, error) {
+func ParseConfig() (*cubehashConfig, error) {
 	conf := DefaultConfig()
 	// set chainid as per --env
 	switch viper.GetString(FlagENV) {
@@ -113,7 +113,7 @@ func ParseConfig() (*CubeHashConfig, error) {
 
 // copied from tendermint/config/toml.go
 // modified to override some defaults and append vm configs
-func ensureRoot(conf *CubeHashConfig) {
+func ensureRoot(conf *cubehashConfig) {
 	rootDir := conf.TMConfig.RootDir
 
 	if err := cmn.EnsureDir(rootDir, 0700); err != nil {
@@ -140,7 +140,7 @@ func ensureRoot(conf *CubeHashConfig) {
 	}
 }
 
-func AppendVMConfig(configFilePath string, conf *CubeHashConfig) {
+func AppendVMConfig(configFilePath string, conf *cubehashConfig) {
 	var configTemplate *template.Template
 	var err error
 	if configTemplate, err = template.New("vmConfigTemplate").Parse(defaultVmTemplate); err != nil {

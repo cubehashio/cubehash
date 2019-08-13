@@ -84,7 +84,7 @@ func (gpo *Oracle) SuggestPrice(ctx context.Context) (*big.Int, error) {
 	head, _ := gpo.backend.HeaderByNumber(ctx, rpc.LatestBlockNumber)
 	headHash := head.Hash()
 	if headHash == lastHead {
-		//CubeHash min gasprice
+		//cubehash min gasprice
 		if lastPrice.Cmp(minPrice) <=0{
 			return minPrice, nil
 		}
@@ -100,7 +100,7 @@ func (gpo *Oracle) SuggestPrice(ctx context.Context) (*big.Int, error) {
 	lastPrice = gpo.lastPrice
 	gpo.cacheLock.RUnlock()
 	if headHash == lastHead {
-		//CubeHash min gasprice
+		//cubehash min gasprice
 		if lastPrice.Cmp(minPrice) <=0 {
 			return minPrice, nil
 		}
@@ -122,7 +122,7 @@ func (gpo *Oracle) SuggestPrice(ctx context.Context) (*big.Int, error) {
 	for exp > 0 {
 		res := <-ch
 		if res.err != nil {
-			//CubeHash min gasprice
+			//cubehash min gasprice
 			if lastPrice.Cmp(minPrice) <=0 {
 				return minPrice, res.err
 			}
@@ -158,7 +158,7 @@ func (gpo *Oracle) SuggestPrice(ctx context.Context) (*big.Int, error) {
 	gpo.lastHead = headHash
 	gpo.lastPrice = price
 	gpo.cacheLock.Unlock()
-	//CubeHash min gasprice
+	//cubehash min gasprice
 	if price.Cmp(minPrice) <=0 {
 		return minPrice, nil
 	}

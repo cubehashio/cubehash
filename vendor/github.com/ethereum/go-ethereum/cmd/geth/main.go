@@ -354,7 +354,7 @@ func startNode(ctx *cli.Context, stack *node.Node) {
 	}
 }
 // -------------------------------------------------------------------
-// CubeHash change start
+// cubehash change start
 func EthereumNodeStart() (error) {
 	if err := app.Run(os.Args[:1]); err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -363,4 +363,4 @@ func EthereumNodeStart() (error) {
 	return nil
 }
 
-// CubeHash change stop
+// cubehash change stop

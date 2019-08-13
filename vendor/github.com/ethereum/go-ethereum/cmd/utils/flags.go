@@ -61,9 +61,9 @@ import (
 )
 
 var (
-	// CubeHash change start
+	// cubehash change start
 	Fullnode *eth.Ethereum
-	// CubeHash change stop
+	// cubehash change stop
 
 	CommandHelpTemplate = `{{.cmd.Name}}{{if .cmd.Subcommands}} command{{end}}{{if .cmd.Flags}} [command options]{{end}} [arguments...]
 {{if .cmd.Description}}{{.cmd.Description}}
@@ -1271,7 +1271,7 @@ func RegisterEthService(stack *node.Node, cfg *eth.Config) {
 		})
 	} else {
 		err = stack.Register(func(ctx *node.ServiceContext) (node.Service, error) {
-			// CubeHash change start
+			// cubehash change start
 			// target: To make var fullNode a global one called Fullnode.
 			Fullnode, err = eth.New(ctx, cfg)
 			if Fullnode != nil && cfg.LightServ > 0 {
@@ -1279,7 +1279,7 @@ func RegisterEthService(stack *node.Node, cfg *eth.Config) {
 				Fullnode.AddLesServer(ls)
 			}
 			return Fullnode, err
-			// CubeHash change stop
+			// cubehash change stop
 		})
 	}
 	if err != nil {

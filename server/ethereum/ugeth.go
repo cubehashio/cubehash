@@ -7,7 +7,7 @@ import (
 
 	"gopkg.in/urfave/cli.v1"
 
-	"github.com/cubehashio/CubeHash/api"
+	"github.com/cubehashio/cubehash/api"
 
 	"github.com/ethereum/go-ethereum/accounts"
 	"github.com/ethereum/go-ethereum/accounts/keystore"

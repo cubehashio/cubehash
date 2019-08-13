@@ -613,7 +613,7 @@ func (pool *TxPool) validateTx(tx *types.Transaction, local bool) error {
 		return ErrNonceTooLow
 	}
 
-	// CubeHash check gas
+	// cubehash check gas
 	if tx.GasPrice().Uint64() == 0 {
 		var account *Account
 		account, err = pool.gasManager.State.GetAccount(from)

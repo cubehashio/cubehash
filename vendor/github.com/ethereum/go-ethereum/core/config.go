@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 )
 
-const StateDir = ".CubeHash/state"
+const StateDir = ".cubehash/state"
 
 func Homedir() string {
 	return os.ExpandEnv(filepath.Join("$HOME", StateDir))

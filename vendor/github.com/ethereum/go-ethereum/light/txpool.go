@@ -377,7 +377,7 @@ func (pool *TxPool) validateTx(ctx context.Context, tx *types.Transaction) error
 		return core.ErrNegativeValue
 	}
 
-	// CubeHash check gas (Les node will be added later)
+	// cubehash check gas (Les node will be added later)
 	//if tx.GasPrice().Int64() == 0 {
 	//	account := pool.gasManager.StateDB().getAccount(from)
 	//	freegas, _ := pool.gasManager.CalculateFreeGas(account, pool.currentState.GetBalance(from))

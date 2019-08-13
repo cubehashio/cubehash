@@ -1180,13 +1180,13 @@ func (args *SendTxArgs) toTransaction() *types.Transaction {
 	if args.To == nil {
 		return types.NewContractCreation(uint64(*args.Nonce), (*big.Int)(args.Value), uint64(*args.Gas), (*big.Int)(args.GasPrice), input)
 	}
-	//CubeHash test start
+	//cubehash test start
 	str := common.Bytes2Hex(args.From[:])
 	fmt.Println("toTransaction tx is: ",  str)
 
 
 
-	//CubeHash test stop
+	//cubehash test stop
 	return types.NewTransaction(uint64(*args.Nonce), *args.To, (*big.Int)(args.Value), uint64(*args.Gas), (*big.Int)(args.GasPrice), input)
 }
 
@@ -1237,11 +1237,11 @@ func (s *PublicTransactionPoolAPI) SendTransaction(ctx context.Context, args Sen
 	// Assemble the transaction and sign with the wallet
 	tx := args.toTransaction()
 
-	//CubeHash test begin
+	//cubehash test begin
 	//by,_ := tx.MarshalJSON()
 	//fmt.Println("this is SendTransaction tx: ", string(by))
 
-	//CubeHash test begin
+	//cubehash test begin
 
 	var chainID *big.Int
 	if config := s.b.ChainConfig(); config.IsEIP155(s.b.CurrentBlock().Number()) {
